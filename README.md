@@ -26,13 +26,17 @@ This theme is applied using the **Stylus** browser extension. This ensures the t
 
 If you manage specific instances, list them in the code using the example below:
 
+```
 `@-moz-document url-prefix("http://192.168.1.50"), url-prefix("https://nms.yourcompany.com") {`
+```
 
 ### Method B: Any LibreNMS (Regexp)
 
 To apply the theme to any URL containing the word "librenms":
 
+```
 `@-moz-document regexp("https?://.*librenms.*") {`
+```
 
 ---
 
