@@ -40,12 +40,6 @@ To apply the theme to any URL containing the word "librenms":
 
 ---
 
-## Why use this theme?
-
-- **Safe Deployment:** Zero server-side changes.
-- **User Choice:** Toggle on/off via extension.
-- **Modern:** No legacy config.php edits.
-
 ## Contributing
 
 Is a specific widget, graph, or plugin missing the Dracula touch?
