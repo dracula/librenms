@@ -1,30 +1,53 @@
-# Dracula for [Foobar](https://foobar.com)
+# Dracula for LibreNMS
 
-> A dark theme for [Foobar](https://foobar.com).
+> A dark and vibrant theme for [LibreNMS](https://www.librenms.org/) based on the [Dracula palette](https://draculatheme.com).
 
 ![Screenshot](./screenshot.png)
 
 ## Install
 
-All instructions can be found at [draculatheme.com/foobar](https://draculatheme.com/foobar).
+This theme is applied using the **Stylus** browser extension. This ensures the theme remains per-user and avoids legacy configurations.
 
-## Team
+### 1. Install Stylus Extension
 
-This theme is maintained by the following person(s) and a bunch of [awesome contributors](https://github.com/dracula/foobar/graphs/contributors).
+- [Chrome / Edge / Brave](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
+- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
 
-| [![Zeno Rocha](https://github.com/zenorocha.png?size=100)](https://github.com/zenorocha) | [![Lucas de França](https://github.com/luxonauta.png?size=100)](https://github.com/luxonauta) |
-| ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [Zeno Rocha](https://github.com/zenorocha)                                               | [Lucas de França](https://github.com/luxonauta)                                               |
+### 2. Install and Configure
 
-## Community
+1. Click here: [Install directly with Stylus](https://raw.githubusercontent.com/santiag0z/dracula-librenms/main/dracula.user.css)
+2. In the Stylus tab, replace `seu-ip-ou-dominio.com` with your server address.
 
-- [Twitter](https://twitter.com/draculatheme) - Best for getting updates about themes and new stuff.
-- [GitHub](https://github.com/dracula/dracula-theme/discussions) - Best for asking questions and discussing issues.
-- [Discord](https://draculatheme.com/discord-invite) - Best for hanging out with the community.
+---
 
-## Dracula PRO
+## Configuration for Multiple Servers
 
-[![Dracula PRO](./.github/dracula-pro.png)](https://draculatheme.com/pro)
+### Method A: Specific Servers
+
+If you manage specific instances, list them in the code using the example below:
+
+`@-moz-document url-prefix("http://192.168.1.50"), url-prefix("https://nms.yourcompany.com") {`
+
+### Method B: Any LibreNMS (Regexp)
+
+To apply the theme to any URL containing the word "librenms":
+
+`@-moz-document regexp("https?://.*librenms.*") {`
+
+---
+
+## Why use this theme?
+
+- **Safe Deployment:** Zero server-side changes.
+- **User Choice:** Toggle on/off via extension.
+- **Modern:** No legacy config.php edits.
+
+## Contributing
+
+Is a specific widget, graph, or plugin missing the Dracula touch?
+
+1. Open an **Issue** describing the element.
+2. Or submit a **Pull Request** with your CSS improvements.
 
 ## License
 

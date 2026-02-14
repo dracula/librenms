@@ -1,0 +1,119 @@
+/* ==UserStyle==
+@name           Dracula for LibreNMS
+@namespace      github.com/santiag0z/dracula-librenms
+@version        1.0.1
+@description    A dark and vibrant theme for LibreNMS based on the Dracula palette.
+@author         santiag0z <santiagoz.silvz@gmail.com>
+@license        MIT
+@preprocessor   uso
+==/UserStyle== */
+
+/* REPLACE "http://192.168.1.50" with your actual LibreNMS URL 
+   (Keep the http:// or https:// part)
+*/
+@-moz-document url-prefix("http://seu-ip-ou-dominio")
+{
+  :root {
+    --drac-bg: #282a36;
+    --drac-cur: #44475a;
+    --drac-fg: #f8f8f2;
+    --drac-com: #6272a4;
+    --drac-cyn: #8be9fd;
+    --drac-grn: #50fa7b;
+    --drac-org: #ffb86c;
+    --drac-pnk: #ff79c6;
+    --drac-pur: #bd93f9;
+    --drac-red: #ff5555;
+    --drac-yel: #f1fa8c;
+  }
+
+  /* Base Body */
+  body {
+    background-color: var(--drac-bg) !important;
+    color: var(--drac-fg) !important;
+  }
+
+  /* Navbar Customization */
+  .navbar-inverse {
+    background-color: var(--drac-cur) !important;
+    border-bottom: 2px solid var(--drac-pur) !important;
+  }
+
+  .navbar-inverse .navbar-nav > li > a {
+    color: var(--drac-fg) !important;
+  }
+
+  .navbar-inverse .navbar-nav > .active > a,
+  .navbar-inverse .navbar-nav > .open > a {
+    background-color: var(--drac-com) !important;
+    color: var(--drac-pnk) !important;
+  }
+
+  /* Panels and Widgets */
+  .panel {
+    background-color: var(--drac-cur) !important;
+    border: 1px solid var(--drac-com) !important;
+  }
+
+  .panel-heading {
+    background-color: var(--drac-com) !important;
+    color: var(--drac-fg) !important;
+    border-bottom: 1px solid var(--drac-pur) !important;
+  }
+
+  /* Tables */
+  .table {
+    color: var(--drac-fg) !important;
+  }
+
+  .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+  }
+
+  .table-hover > tbody > tr:hover {
+    background-color: var(--drac-pur) !important;
+    color: var(--drac-bg) !important;
+  }
+
+  .table-hover > tbody > tr:hover a {
+    color: var(--drac-bg) !important;
+  }
+
+  /* Badges & Status */
+  .label-danger,
+  .badge-critical {
+    background-color: var(--drac-red) !important;
+  }
+  .label-success,
+  .badge-ok {
+    background-color: var(--drac-grn) !important;
+    color: var(--drac-bg) !important;
+  }
+  .label-warning {
+    background-color: var(--drac-org) !important;
+    color: var(--drac-bg) !important;
+  }
+
+  /* Links */
+  a {
+    color: var(--drac-cyn) !important;
+    transition: 0.2s;
+  }
+  a:hover {
+    color: var(--drac-pnk) !important;
+    text-decoration: none;
+  }
+
+  /* Forms and Search */
+  .form-control,
+  .dataTables_filter input {
+    background-color: var(--drac-bg) !important;
+    color: var(--drac-fg) !important;
+    border: 1px solid var(--drac-com) !important;
+  }
+
+  .form-control:focus {
+    border-color: var(--drac-pur) !important;
+    box-shadow: 0 0 5px var(--drac-pur) !important;
+  }
+}
