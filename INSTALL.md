@@ -1,19 +1,30 @@
-### [Foobar](https://foobar.com)
+## [LibreNMS](https://www.librenms.org)
 
-#### Install using Git
+#### Install the Stylus extension
 
-If you are a git user, you can install the theme and keep up to date by cloning the repo:
+This theme is applied via the [Stylus](https://github.com/openstyles/stylus) browser extension:
 
-```bash
-git clone https://github.com/dracula/foobar.git
+- [Chrome / Edge / Brave](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
+- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
+
+#### Activating the theme
+
+1. Click [install directly with Stylus](https://raw.githubusercontent.com/dracula/librenms/main/dracula.user.css);
+2. In the Stylus tab, replace `your-ip-or-domain.com` with your LibreNMS server address;
+3. Save and reload your LibreNMS instance.
+
+#### Configuration for multiple servers
+
+If you manage multiple instances, you can target them explicitly or use a pattern.
+
+**Specific servers** — list each URL prefix in the document rule:
+
+```css
+@-moz-document url-prefix("http://192.168.1.50"), url-prefix("https://nms.yourcompany.com") {
 ```
 
-#### Install manually
+**Any LibreNMS instance** — match any URL containing the word "librenms":
 
-Download using the [GitHub `.zip` download](https://github.com/dracula/foobar/archive/main.zip) option and unzip them.
-
-#### Activating theme
-
-1. Do this;
-2. Then that;
-3. Boom! It's working ✨
+```css
+@-moz-document regexp("https?://.*librenms.*") {
+```
